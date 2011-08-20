@@ -1,0 +1,23 @@
+@import url("default.css");
+
+hr {
+  border-style:solid;
+}
+
+#featured {
+  color:#ccc;
+  background:#000;
+}
+
+body {
+  border-top:40px solid #222;
+}
+
+#header {
+  margin-top:-40px;
+  background:none;
+}
+
+#footer {
+  display:none;
+}

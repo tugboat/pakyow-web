@@ -1,0 +1,88 @@
+<div class="homeIntro">
+  <img src="images/pakyow-small.png" class="logo">
+  <img src="images/pakyow-text.png" class="text_logo">
+  <h1>Knock out your hardest hitting projects.</h1>
+  <h2>
+    Pakyow is a web framework for Ruby that packs a serious punch. Pound for pound it's
+    the best way to build a web app.
+    <span class="rumble">Get ready to rumble.</span>
+  </h2>
+</div>
+
+<ul id="navigation"></ul>
+
+<div class="walkthrough">
+  <div class="box">
+    <h2>Let views be views.</h2>
+  
+    <p>
+      Views are 100% HTML, no template language required. The view has finally
+      been freed from logic.
+    </p>
+  </div>
+  
+  <div class="box">
+    <h2>Views are data aware.</h2>
+  
+    <p>
+      A view knows what it presents. Use this to create powerful connections 
+      between business logic and views.
+    </p>
+  </div>
+  
+  <div class="box">
+    <h2>Keep moving forward.</h2>
+  
+    <p>
+      Prototype an app by building the views first. Then write the view logic 
+      without changing a single view.
+    </p>
+  </div>
+</div>
+
+<h1>Getting Started</h1>
+
+<p>
+  The Ruby language must be installed, as well as a package manager, such as <a href="http://rubygems.org">RubyGems</a>. 
+  Pakyow plays nice with <a href="http://ruby-lang.org">MRI</a> 1.8.7 and 1.9.2. JRuby and Rubinius support is in the works.
+</p>
+
+<p>
+  Installation is super easy:
+  
+  <code class="console">gem install pakyow</code>
+</p>
+
+<p>
+  Here's the simplest app you can build:
+  
+  <div class="code ruby">
+require 'rubygems'
+require 'pakyow-core'
+
+class HelloApp &lt; Pakyow::Application
+  routes do
+    get '/' do
+      response.body &lt;&lt; "Hello Pakyow"
+    end
+  end
+end
+
+HelloApp.run
+  </div>
+</p>
+
+<p>
+  Pakyow includes an application generator that makes getting started even easier.
+  <code class="console">pakyow new application</code>
+</p>
+
+<p>
+  Then start the application server:
+  <code class="console">cd application<br>$ pakyow server</code>
+</p>
+
+<p>
+  That's it! You'll find your application running here: <a href="http://localhost:3000" target="_blank">localhost:3000</a>.
+  Check out the <a href="/manual">manual</a> for more information.
+</p>
