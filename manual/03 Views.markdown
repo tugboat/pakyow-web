@@ -8,7 +8,7 @@ View construction begins with a root view, which usually defines the general vie
 
 Pakyow will look for content for this container in a content view named "main.html". Any number of containers can be defined in any view (root views or content views). 
 
-Views are defined in a folder heirarchy and are pieced together based on the URL. Say we have the following files in the views directory:
+Views are defined in a folder hierarchy and are pieced together based on the URL. Say we have the following files in the views directory:
 
     pakyow.html (the default root view; defines one content area named "main")
     index/
@@ -16,13 +16,13 @@ Views are defined in a folder heirarchy and are pieced together based on the URL
     another_page/
       main.html
 
-When a request is made for '/' (or '/index') the content view in the 'index' directory will be used. Same for 'another_page'. This heirarchy can be as deep as needed.
+When a request is made for '/' (or '/index') the content view in the 'index' directory will be used. Same for 'another_page'. This hierarchy can be as deep as needed.
 
 In most cases the view path matches the URL exactly. However there are some exceptions when dealing with routes that define parameters (e.g. 'foo/:bar') and restful routes.
 
 Parameterized routes are collapsed down when determining the view path. For example, the view path for 'foo/:bar' is simply 'foo'. This rule also applies to restful routes, and there is one more rule for the 'show' route. If  restful routes are defined for 'posts', the show route would be 'posts/:id'. Instead of the view path collapsing down to 'posts', it becomes 'posts/show'.
 
-Views can be overriden at any location in the heirarchy. Let's add to our view heirarchy described above:
+Views can be overridden at any location in the hierarchy. Let's add to our view hierarchy described above:
 
     pakyow.html
     index/
@@ -32,9 +32,9 @@ Views can be overriden at any location in the heirarchy. Let's add to our view h
       yet_another_page/
         main.html
 
-Requests for 'index' and 'another_page' work as before. When a request is made for 'another_page/yet_another_page' only the main.html content view in the 'yet_another_page' directory will be used. Root views can also be overriden this way.
+Requests for 'index' and 'another_page' work as before. When a request is made for 'another_page/yet_another_page' only the main.html content view in the 'yet_another_page' directory will be used. Root views can also be overridden this way.
 
-Since any number of root views can exist, it is necessary to define which root view to use at any given level in the view heirarchy. This can be done by appending '.root_view_name' to the end of a directory. For example:
+Since any number of root views can exist, it is necessary to define which root view to use at any given level in the view hierarchy. This can be done by appending '.root_view_name' to the end of a directory. For example:
 
     another_root.html
     pakyow.html
@@ -43,7 +43,7 @@ Since any number of root views can exist, it is necessary to define which root v
     another_page.another_root/
       main.html
 
-In this case requests for '/another_page' will use the 'another_root.html' root view. Changing the root view on a directory also changes it for directories further down the heirarchy.
+In this case requests for '/another_page' will use the 'another_root.html' root view. Changing the root view on a directory also changes it for directories further down the hierarchy.
 
 <h2 id="section_3.1">3.1 Data Informed</h2>
 

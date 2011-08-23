@@ -83,7 +83,7 @@ with_container :main { ... }
 The second approach can be used on any view:
 
 <div class="code ruby">
-presenter.view.find('#container').in_context { … }
+presenter.view.find('#container').in_context { ... }
 </div>
 
 Inside the block, the view can be accessed through the 'context' method.
@@ -98,7 +98,7 @@ The makes it really easy to group manipulations together to more easily comprehe
 
 <h2 id="section_6.3">6.3 Binding</h2>
 
-Data can easily be bound to its view (for more information on how the view is informed of the data it represents, see 'Views > Data Informed').
+Data can easily be bound to its view (for more information on how the view is informed of the data it represents, see [Views > Data Informed](#section_3.1)).
 
 Given the following view:
 
@@ -135,7 +135,7 @@ class MyView &lt; Pakyow::Presenter::View
 end
 </div>
 
-The default view file can be overriden by passing a path to the initializer.
+The default view file can be overridden by passing a path to the initializer.
 
 <div class="code ruby">
 MyView.new('path/to/another_view.html')

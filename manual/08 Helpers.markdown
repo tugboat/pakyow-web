@@ -32,7 +32,7 @@ Cookies can be set or fetched the same way:
 request.cookies[:value] = 'foo'
 </div>
 
-By default a cookie is created for the path '/' and is set to expire in seven days. These defaults can be overriden when setting a cookie:
+By default a cookie is created for the path '/' and is set to expire in seven days. These defaults can be overridden when setting a cookie:
 
 <div class="code ruby">
 request.cookies[:value] = { 

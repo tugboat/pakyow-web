@@ -1,6 +1,6 @@
 <h1 id="section_5">5 Controllers</h1>
 
-In Pakyow, controllers are optional but recommended for an app of any substantial size. When a request is matched, it is routed to a controller and an action (unless a block is defined for the route; see Routing for more information).
+In Pakyow, controllers are optional but recommended for an app of any substantial size. When a request is matched, it is routed to a controller and an action (unless a block is defined for the route; see [Routes](#section_4) for more information).
 
 A controller is a class, an action is a method defined in the class. For example:
 
