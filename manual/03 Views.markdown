@@ -58,8 +58,8 @@ In this example the view represents two pieces of data from the Contact model: f
 
 Form fields can be informed using the "name" attribute. The following are identical:
 
-    <input type="text name="contact[full_name]">
-    <input type="text itemprop="contact[full_name]">
+    <input type="text" name="contact[full_name]">
+    <input type="text" itemprop="contact[full_name]">
 
 See [View Logic > Binding](#section_6.3) for more information on how objects are bound to views.
 
