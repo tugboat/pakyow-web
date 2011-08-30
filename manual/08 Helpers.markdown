@@ -46,7 +46,7 @@ request.cookies[:value] = {
 Issuing a browser redirect is easy:
 
 <div class="code ruby">
-redirect_to 'url'
+app.redirect_to 'url'
 </div>
 
 The response status is set to 302 by default and the response is sent immediately after this call is made.
