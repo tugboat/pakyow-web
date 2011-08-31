@@ -5,6 +5,7 @@
   - Can now run 'pakyow server' on Windows. Sorry for the delay guys.
   - Error handlers now have access to Helpers. Also fixes some issues presenting views from error handlers.
   - Binding an object to a root node now works as one would expect.
+  - Fixes an issue when using alphanumeric ids in restful routes.
   
 - 0.6.1 (August 22, 2011): 
   - Fixes gemspec issue (stupid, sorry).
