@@ -541,6 +541,21 @@ blockquote {
   font-weight:bold;
 }
 
+ul ul {
+  list-style-type:disc;
+  margin-bottom:10px;
+  margin-left:20px;
+}
+
+ul p {
+  margin:0;
+}
+
+#toc ul ul {
+  list-style-type:none;
+  margin-bottom:0;
+}
+
 /*----------------------------------------------------
 RESPONSIVE CSS
 ----------------------------------------------------*/

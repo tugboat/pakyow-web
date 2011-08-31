@@ -5,7 +5,11 @@ GEM
     coderay (0.9.8)
     daemons (1.1.4)
     eventmachine (0.12.10)
+    gem_plugin (0.2.3)
+    mongrel (1.1.5-java)
+      gem_plugin (>= 0.2.3)
     nokogiri (1.5.0)
+    nokogiri (1.5.0-java)
     pakyow (0.6.1)
       pakyow-core (= 0.6.1)
       pakyow-presenter (= 0.6.1)
@@ -22,6 +26,7 @@ GEM
       rack (>= 1.0.0)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
