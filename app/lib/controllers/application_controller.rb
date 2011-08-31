@@ -31,7 +31,7 @@ class ApplicationController
   
   def highlight
     presenter.view.find('div.ruby').each do |view|
-      view.content = CodeRay.scan(view.content.strip.gsub('&lt;', '<'), :ruby).div(:css => :class)
+      view.content = CodeRay.scan(view.content.strip.gsub(/&lt;|&gt;/) {|s| {'&lt;' => '<','&gt;' => '>'}[s]}, :ruby).div(:css => :class)
     end
   end
 end
