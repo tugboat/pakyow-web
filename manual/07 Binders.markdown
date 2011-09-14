@@ -27,7 +27,7 @@ Methods defined in the Pakyow::GeneralHelpers module are available in the Binder
 
 <h2 id="section_7.1">7.1 Form Actions</h2>
 
-Pakyow makes it easy to change the action and method for a form based on the state of the object. Note this will only work if a Binder exists for the object being bound *and* restul routes exist for the object type (see [Routes](#section_4)). 
+Pakyow makes it easy to change the action and method for a form based on the state of the object. Note this will only work if a Binder exists for the object being bound *and* restful routes exist for the object type (see [Routes](#section_4)). 
 
 Here's an example for the Contact object:
 
