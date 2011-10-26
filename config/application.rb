@@ -4,7 +4,10 @@ require 'bundler/setup'
 require 'rubygems'
 require 'coderay'
 require 'rdiscount'
+
 require 'pakyow'
+
+require 'blog_engine'
 
 # Production Configuration
 if File.exists? '../shared/conf-production.rb'
@@ -18,10 +21,21 @@ module PakyowApplication
     configure(:development) do
     end
     
-    # routes
     routes do
       get '/',      :ApplicationController, :index
-      get 'manual', :ApplicationController, :manual
+      get '/manual', :ApplicationController, :manual
+      
+      get '/posts' do
+        BlogEngine.list
+      end
+      
+      get BlogEngine.post_uri do
+        BlogEngine.single
+      end
+      
+      get '/feed' do
+        BlogEngine.feed
+      end
     end
   end
 end

@@ -1,6 +1,11 @@
+GIT
+  remote: git://github.com/bryanp/pakyow_blog_engine.git
+  revision: 14760b7552f2b2bbfcc618bcfe0bfd3462d36e6f
+  specs:
+    pakyow_blog_engine (0.1)
+
 GEM
   remote: http://rubygems.org/
-  remote: http://code.metabahn.net/
   specs:
     coderay (0.9.8)
     daemons (1.1.4)
@@ -33,5 +38,6 @@ DEPENDENCIES
   coderay
   mongrel
   pakyow (= 0.6.3.1)
+  pakyow_blog_engine!
   rdiscount
   thin (~> 1.2)
