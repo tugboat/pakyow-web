@@ -4,7 +4,7 @@ body {
   font:14px "Helvetica Neue", Arial, sans-serif;
   color:#333;
   
-  background-color:#fff;
+  background-color:#f6f6f6;
   
   padding:0;
   margin:0;
@@ -17,8 +17,9 @@ body {
 a {
 /*  color:#c64e50;*/
 /*  color:#a4292b;*/
-/*  color:#536377;*/
-  color:#1b57aa;
+  color:#2b5b98;
+/*  color:#1b57aa;*/
+  text-decoration:none;
 }
 
 p {
@@ -83,13 +84,15 @@ h3 {
 }
 
 code, div.code.ruby {
+  font-family:Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  font-size:12px;
   display:block;
-  color:#fff;
-  background:#333;
+  background:#fff;
   padding:5px 10px;
   border-radius:2px;
   margin:10px 0;
   margin-bottom:20px;
+  border:1px solid #cbcbcb;
 }
 
 div.code.ruby {
@@ -123,8 +126,12 @@ ul {
   font-size:13px;
   width:720px;
   margin:auto;
-  margin-left:130px;
-  margin-bottom:100px;
+  margin-top:65px;
+  margin-bottom:80px;
+  border-top:2px solid #cbcbcb;
+  border-bottom:2px solid #cbcbcb;
+  padding:5px 0;
+  text-align:center;
 }
 
 #navigation.right {
@@ -142,7 +149,7 @@ ul {
 #navigation li {
   display:inline;
   
-  margin-right:25px;
+  margin-right:35px;
 }
 
 #navigation li.version {
@@ -171,7 +178,8 @@ ul {
 }
 
 #navigation li a:hover, #navigation li a.active {
-  border-bottom:2px solid #c6d5ea;
+  border-bottom:2px solid #cbcbcb;
+  color:#777;
 }
 
 #wrapper {
@@ -191,11 +199,18 @@ ul {
   text-align:center;
 }
 
-#footer, #footer a {
-/*  color:#6b8199;*/
-  color:#666;
-  font-size:11px;
-/*  text-transform:uppercase;*/
+#footer {
+  color:#999;
+  font-size:12px;
+}
+
+#footer a {
+  color:#777;
+  font-weight:bold;
+}
+
+#footer a:hover {
+  color:#2b5b98;
 }
 
 #footer a.logo {
@@ -242,14 +257,19 @@ ul {
   height:98px;
 }
 
-.text_logo {
+.logoText {
+  color:#333;
+  float:left;
   margin-top:10px;
-/*  margin-bottom:10px;*/
+  font-family: myriad-pro-1,myriad-pro-2;
+  font-weight:700;
+  font-size:100px
 }
 
 .homeIntro {
   line-height:2.5em;
   margin-bottom:20px;
+/*  position:absolut;*/
 }
 
 .homeIntro h1 {
@@ -258,7 +278,9 @@ ul {
 }
 
 .homeIntro h2 {
-  margin-left:130px;
+  clear:both;
+  /*padding-top:50px;*/
+/*  margin-left:130px;*/
   line-height:1.4em;
 }
 
@@ -533,8 +555,13 @@ blockquote {
   margin-top:40px;
 }
 
+#toc {
+  line-height:1.6em;
+}
+
 #toc a {
   color:#333;
+  text-decoration:underline;
 }
 
 .rumble {
@@ -576,7 +603,7 @@ RESPONSIVE CSS
   
   .homeIntro h2 {
     margin:0;
-    margin-bottom:40px;
+/*    margin-bottom:40px;*/
   }
   
   #navigation {

@@ -1,6 +1,6 @@
 <h1 id="section_3">3 Views</h1>
 
-In Pakyow, views define what the application will present. They are 100% HTML and no template language or special tags are needed to construct the view layer.
+In Pakyow, views define what the application will present. They are 100% HTML and no template language or special tags are needed to construct the view layer. TODO: remove mention of "100% HTML" in favor of zero logic.
 
 View construction begins with a root view, which usually defines the general view structure. Containers are created in the root view, which define the parts of the structure that are generated dynamically. Creating a container is as easy as adding an "id" attribute to any tag. For example, this is a container named "main":
 

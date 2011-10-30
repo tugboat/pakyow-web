@@ -3,9 +3,12 @@ class ApplicationController
   
   def index
     highlight
+    presenter.view.find('#nav-overview a').add_class('active')
   end
   
   def manual
+    presenter.view.find('#nav-manual a').add_class('active')
+    
     presenter.view.title = 'Pakyow: Manual'
     presenter.view.find('#toc').content = RDiscount.new(File.open('manual/_toc.markdown').read).to_html
     
