@@ -1,4 +1,4 @@
-<h1 id="section_7">7 Binders</h1>
+<h1 id="section_9">9 Binders</h1>
 
 When binding data to a view it's often necessary to format the data before binding. Sometimes you also need to change other attributes in addition to setting content (e.g. setting the 'href' for an anchor tag). In Pakyow this logic lives in a Binder class.
 
@@ -25,7 +25,7 @@ The object being bound is accessible through the 'bindable' method. The method's
 
 Methods defined in the Pakyow::GeneralHelpers module are available in the Binder class (request/response).
 
-<h2 id="section_7.1">7.1 Form Actions</h2>
+<h2 id="section_9.1">9.1 Form Actions</h2>
 
 Pakyow makes it easy to change the action and method for a form based on the state of the object. Note this will only work if a Binder exists for the object being bound *and* restful routes exist for the object type (see [Routes](#section_4)). 
 
@@ -39,7 +39,7 @@ If 'id' has no value the object is assumed to be a new object, so the form will 
 
 If 'id' has a value Pakyow assumes the object has been created and will be updated, thus resulting in configuring the form to submit to the object's restful route for 'update'.
 
-<h2 id="section_7.2">7.2 Dropdowns</h2>
+<h2 id="section_9.2">9.2 Dropdowns</h2>
 
 When binding to a dropdown, Pakyow will automatically select the option that matches the value for the attribute. Options for the dropdown can be defined in a binder:
 
@@ -72,6 +72,6 @@ def attribute_options
 end
 </div>
 
-<h2 id="section_7.3">7.3 Checkboxes & Radio Buttons</h2>
+<h2 id="section_9.3">9.3 Checkboxes & Radio Buttons</h2>
 
 The checkbox or radio button who's value matches the value of the attribute is selected automatically.

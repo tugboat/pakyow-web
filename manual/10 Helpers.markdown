@@ -1,8 +1,8 @@
-<h1 id="section_8">8 Helpers</h1>
+<h1 id="section_10">10 Helpers</h1>
 
 Helper methods are defined in one of two modules: Pakyow::Helpers or Pakyow::GeneralHelpers. GeneralHelpers only provide information and are used in the Binder classes.
 
-<h2 id="section_8.1">8.1 Params</h2>
+<h2 id="section_10.1">10.1 Params</h2>
 
 Query string parameters and values from parameterized routes are available in the params hash:
 
@@ -10,7 +10,7 @@ Query string parameters and values from parameterized routes are available in th
 request.params
 </div>
 
-<h2 id="section_8.2">8.2 Sessions & Cookies</h2>
+<h2 id="section_10.2">10.2 Sessions & Cookies</h2>
 
 Sessions keep state across requests. They can be enabled by using any Rack session middleware:
 
@@ -41,7 +41,7 @@ request.cookies[:value] = {
 }
 </div>
 
-<h2 id="section_8.3">8.3 Redirecting</h2>
+<h2 id="section_10.3">10.3 Redirecting</h2>
 
 Issuing a browser redirect is easy:
 
@@ -53,7 +53,7 @@ The response status is set to 302 by default and the response is sent immediatel
 
 You can also pass a status code to 'redirect_to' (e.g. 301 for permenent redirect).
 
-<h2 id="section_8.4">8.4 Sending Files</h2>
+<h2 id="section_10.4">10.4 Sending Files</h2>
 
 A file can be sent:
 
@@ -72,7 +72,7 @@ app.send_data(data, mime_type)
 
 The name the file will be sent as can also be passed.
 
-<h2 id="section_8.5">8.5 Request & Response Objects</h2>
+<h2 id="section_10.5">10.5 Request & Response Objects</h2>
 
 The underlying Rack Request & Response objects can be accessed through the 'request' and 'response' methods. This is useful for directly modifying things like response status.
 
@@ -92,7 +92,7 @@ The format used in this request. This value defaults to HTML and is changed by a
 ### request.error
 The error that occurred during the request.
 
-<h2 id="section_8.6">8.6 Logging</h2>
+<h2 id="section_10.6">10.6 Logging</h2>
 
 Write to the log using the static Log class:
 

@@ -1,4 +1,4 @@
-<h1 id="section_10">10 Configuring Pakyow</h1>
+<h1 id="section_12">12 Configuring Pakyow</h1>
 
 All configuration is defined in the Application class. If auto_reload is set to "true", the configuration will be reloaded on each request (perfect for development). Otherwise the configuration will be loaded once at runtime.
 
@@ -17,7 +17,7 @@ configure :development do
 end
 </div>
 
-<h2 id="section_10.1">10.1 Configuration Settings</h2>
+<h2 id="section_12.1">12.1 Configuration Settings</h2>
 
 Configuration settings are broken into three groups: app, presenter, and server.
 

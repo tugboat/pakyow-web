@@ -1,4 +1,4 @@
-<h1 id="section_5">5 Controllers</h1>
+<h1 id="section_7">7 Controllers</h1>
 
 In Pakyow, controllers are optional but recommended for an app of any substantial size. When a request is matched, it is routed to a controller and an action (unless a block is defined for the route; see [Routes](#section_4) for more information).
 
@@ -11,4 +11,4 @@ class MyController
 end
 </div>
 
-There are several convenience methods (such as 'request', 'response', and 'presenter') that you will probably want easy access to from your controller. Just include 'Pakyow::Helpers' into your class (see [Helpers](#section_8) for more information).
+There are several convenience methods (such as 'app', 'request', 'response', and 'presenter') that you will probably want easy access to from your controller. Just include 'Pakyow::Helpers' into your class (see [Helpers](#section_8) for more information).

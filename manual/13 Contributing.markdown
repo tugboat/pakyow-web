@@ -1,4 +1,4 @@
-<h1 id="section_11">11 Contributing</h1>
+<h1 id="section_13">13 Contributing</h1>
 
 Pakyow is hosted on GitHub [here](https://github.com/metabahn/pakyow). Any issues you encounter can be reported using the [GitHub Issue Tracker](https://github.com/metabahn/pakyow/issues).
 
