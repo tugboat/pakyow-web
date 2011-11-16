@@ -4,7 +4,7 @@ Handlers are named code blocks that can be invoked either explicitly or implicit
 
 They are defined within a 'handlers' block in application.rb.
 
-A handler is defined with a name and an optional response code.
+A handler is defined with a name and an optional response status.
 
 <div class="code ruby">
 handlers do
@@ -21,10 +21,18 @@ invoke_handler!(:not_found)
 </div>
 
 When invoked, current execution is stopped and control is transferred to the handler.
-If the handler is defined with a response code, the response is set accordingly.
+If the handler is defined with a response status, the response is set accordingly.
+
+A handler may also be invoked with a status code argument.
+<div class="code ruby">
+invoke_handler!(500)
+</div>
+
+In this case, a handler is executed if there is one with a corresponding response status.
+In any case, the response status is set to the status argument.
 
 TODO: I don't think the following got implemented this way. Is this what we want?
 
-A handler is implicitly invoked if defined with a response code and that response code is what is returned.
+A handler is implicitly invoked if defined with a response status and that status is what is set during the route block.
 
 

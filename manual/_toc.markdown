@@ -33,6 +33,7 @@ TODO: add "Custom Presenter" section that describes how to create a presenter (w
 	- [10.4 Sending Files](#section_10.4)
 	- [10.5 Request/Response Objects](#section_10.5)
 	- [10.6 Logging](#section_10.6)
+	- [10.7 Halting](#section_10.7)
 - [11 Error Handling](#section_11)
 - [12 Configuring Pakyow](#section_12)
 	- [12.1 Configuration Settings](#section_12.1)

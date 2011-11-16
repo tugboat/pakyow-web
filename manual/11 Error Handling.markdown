@@ -1,12 +1,8 @@
 <h1 id="section_11">11 Error Handling</h1>
 
-TODO: update section based on changes
+ See the section on [Handlers](#section_6) for how to define a handler that has an associated response status.
 
-Error handlers can be defined for 500 and 404 errors. These handlers are created in the same context as the routes and configuration. Like routes, errors can be a controller and action, or a block.
+If the request doesn't match a route, a view path, or a static file then a 404 response status is set.
+If a handler is defined with a 404 status then the handler is invoked.
 
-<div class="code ruby">
-error 500, :ErrorHandlingController, :handle_500
-error 404 { # handle 404 }
-</div>
-
-The handler for a 500 error is invoked when an exception is raised in the backend code. A 404 error is generated when the request doesn't match a route, a view path, or a static file.
+If an exception is raised in the backend code then a 500 response status is set and a 500 status handler is invoked if one is defined.
