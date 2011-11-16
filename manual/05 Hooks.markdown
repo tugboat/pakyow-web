@@ -1,6 +1,7 @@
 <h1 id="section_5">5 Hooks</h1>
 
 Hooks are code blocks that can run before, after, and around the code of a route.
+They are defined in the 'routes' block of application.rb along with routes.
 
 A hook is defined with a name and either a code block or a controller and action.
 
