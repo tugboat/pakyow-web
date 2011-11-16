@@ -4,10 +4,24 @@ GIT
   specs:
     pakyow_blog_engine (0.1)
 
+GIT
+  remote: git://github.com/metabahn/pakyow.git
+  revision: ef3df41661d64bfe051ce0b31efd9bae8cf5014b
+  branch: release
+  specs:
+    pakyow (0.7)
+      pakyow-core (= 0.7)
+      pakyow-presenter (= 0.7)
+    pakyow-core (0.7)
+      rack (~> 1.3)
+    pakyow-presenter (0.7)
+      nokogiri (~> 1.5)
+      pakyow-core (= 0.7)
+
 GEM
   remote: http://rubygems.org/
   specs:
-    coderay (0.9.8)
+    coderay (1.0.4)
     daemons (1.1.4)
     eventmachine (0.12.10)
     gem_plugin (0.2.3)
@@ -15,15 +29,7 @@ GEM
       gem_plugin (>= 0.2.3)
     nokogiri (1.5.0)
     nokogiri (1.5.0-java)
-    pakyow (0.6.3.1)
-      pakyow-core (= 0.6.3.1)
-      pakyow-presenter (= 0.6.3.1)
-    pakyow-core (0.6.3.1)
-      rack (~> 1.3)
-    pakyow-presenter (0.6.3.1)
-      nokogiri (~> 1.5)
-      pakyow-core (= 0.6.3.1)
-    rack (1.3.0)
+    rack (1.3.5)
     rdiscount (1.6.8)
     thin (1.2.11)
       daemons (>= 1.0.9)
@@ -37,7 +43,7 @@ PLATFORMS
 DEPENDENCIES
   coderay
   mongrel
-  pakyow (= 0.6.3.1)
+  pakyow!
   pakyow_blog_engine!
   rdiscount
   thin (~> 1.2)
