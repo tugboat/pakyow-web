@@ -152,6 +152,10 @@ ul {
   margin-right:35px;
 }
 
+#navigation li:last-child {
+  margin-right:0;
+}
+
 #navigation li.version {
   opacity:0;
 /*  display:none;*/
