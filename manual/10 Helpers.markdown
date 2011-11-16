@@ -1,6 +1,7 @@
 <h1 id="section_10">10 Helpers</h1>
 
 Helper methods are defined in one of two modules: Pakyow::Helpers or Pakyow::GeneralHelpers. GeneralHelpers only provide information and are used in the Binder classes.
+TODO: and the other Helpers do what?
 
 <h2 id="section_10.1">10.1 Params</h2>
 
@@ -20,7 +21,7 @@ middleware do
 end
 </div>
 
-They are accessed through the request:
+Sessions are then accessed through the request object:
 
 <div class="code ruby">
 request.session[:value] = 'foo'
@@ -52,6 +53,7 @@ app.redirect_to 'url'
 The response status is set to 302 by default and the response is sent immediately after this call is made.
 
 You can also pass a status code to 'redirect_to' (e.g. 301 for permenent redirect).
+TODO: example
 
 <h2 id="section_10.4">10.4 Sending Files</h2>
 
@@ -63,6 +65,7 @@ app.send_file(file)
 
 A file or path can be passed. You can also pass the name the file will be sent as
 and the mime type (which is guessed if not passed).
+TODO: example
 
 Data can also be sent:
 
@@ -71,6 +74,7 @@ app.send_data(data, mime_type)
 </div>
 
 The name the file will be sent as can also be passed.
+TODO: example
 
 <h2 id="section_10.5">10.5 Request & Response Objects</h2>
 

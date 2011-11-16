@@ -1,3 +1,6 @@
+TODO: add "View Construction" section that goes into more details and offers more examples/philosophy
+TODO: add "Custom Presenter" section that describes how to create a presenter (would this fit in better as a guide?)
+
 - [1 Installation](#section_1)
 - [2 Getting Started](#section_2)
 	- [2.1 Architecture](#section_2.1)

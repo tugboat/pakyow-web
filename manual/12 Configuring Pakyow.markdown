@@ -1,5 +1,7 @@
 <h1 id="section_12">12 Configuring Pakyow</h1>
 
+TODO: add middleware settings (others?)
+
 All configuration is defined in the Application class. If auto_reload is set to "true", the configuration will be reloaded on each request (perfect for development). Otherwise the configuration will be loaded once at runtime.
 
 Configuration can be defined for the entire app:

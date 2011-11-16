@@ -1,6 +1,7 @@
 <h1 id="section_3">3 Views</h1>
 
-In Pakyow, views define what the application will present. They are 100% HTML and no template language or special tags are needed to construct the view layer. TODO: remove mention of "100% HTML" in favor of zero logic.
+In Pakyow, views define what the application will present. They are 100% HTML and no template language or special tags are needed to construct the view layer. 
+TODO: remove mention of "100% HTML" in favor of zero logic; rewrite the first sentence because it's vague
 
 View construction begins with a root view, which usually defines the general view structure. Containers are created in the root view, which define the parts of the structure that are generated dynamically. Creating a container is as easy as adding an "id" attribute to any tag. For example, this is a container named "main":
 
@@ -8,7 +9,7 @@ View construction begins with a root view, which usually defines the general vie
 
 Pakyow will look for content for this container in a content view named "main.html". Any number of containers can be defined in any view (root views or content views). 
 
-Views are defined in a folder hierarchy and are pieced together based on the URL. Say we have the following files in the views directory:
+Views are defined in a folder hierarchy and are pieced together based on the URL (TODO: path, uri?). Say we have the following files in the views directory:
 
     pakyow.html (the default root view; defines one content area named "main")
     index/
@@ -22,7 +23,7 @@ In most cases the view path matches the URL exactly. However there are some exce
 
 Parameterized routes are collapsed down when determining the view path. For example, the view path for 'foo/:bar' is simply 'foo'. This rule also applies to restful routes, and there is one more rule for the 'show' route. If  restful routes are defined for 'posts', the show route would be 'posts/:id'. Instead of the view path collapsing down to 'posts', it becomes 'posts/show'.
 
-Views can be overridden at any location in the hierarchy. Let's add to our view hierarchy described above:
+Views can be overridden at any location in the hierarchy. Let's add to our view hierarchy defined above:
 
     pakyow.html
     index/

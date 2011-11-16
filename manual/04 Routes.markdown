@@ -23,7 +23,7 @@ A route spec can also be a regular expression:
 get /(.)*/ {}
 </div>
 
-Routes are matched in the order they are defined. Once a match occurs, the business logic for the route is invoked and the response returned.
+Routes are matched in the order they are defined. Once a match occurs, the business logic for the route is invoked and the response is returned.
 
 Parameters can be defined in the route spec and are accessible in the app.params hash:
 
@@ -75,4 +75,4 @@ A model can also be provided in the restful route definition:
 restful 'posts', :PostsController, :Post
 </div>
 
-See [Binders - Form Action](#section_7.1) for more information.
+Providing the model brings a few advantages when binding. This is discussed in more depth here: [Binders - Form Action](#section_7.1).

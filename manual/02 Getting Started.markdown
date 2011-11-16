@@ -1,6 +1,6 @@
 <h1 id="section_2">2 Getting Started</h1>
 
-Pakyow includes an application generator to make things easy.
+Pakyow includes an application generator to make it easy to get started.
 
 <code class="console">
   pakyow new application
@@ -26,16 +26,21 @@ TODO: This should be more of a comparison.
 <h2 id="section_2.2">2.2 Application Structure</h2>
 
 ### app/lib
-The business logic lives here. No structure is forced, all files with a .rb extension are loaded at runtime. TODO: make a note that this is configurable.
+The business logic lives here. No structure is forced, all files with a .rb extension are loaded at runtime. 
+TODO: make a note that this is configurable.
 
 ### app/views
-Where the views live.
+Where the views live. 
+TODO: expand on this and possibly link to view section
 
 ### config
 All configuration files live here. Upon app generation it contains a single file, application.rb. This file contains the application class and defines the routes, configuration, and error handlers for the application.
+TODO: this isn't really a place for configurations, but for application files
 
 ### logs
-Contains the log file for the application (requests.log by default). TODO: rename default to log?
+Contains the log file for the application (requests.log by default). 
+TODO: rename default to log?
 
 ### public
 The document root. Anything placed here can be accessed directly through the URL.
+TODO: give an example (images, css, js, etc)

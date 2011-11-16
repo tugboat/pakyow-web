@@ -1,8 +1,8 @@
 <h1 id="section_8">8 View Logic</h1>
 
-Pakyow provides several ways for the business logic of an application to easily interact with the views. In most frameworks the view logic is contained in the view itself, but Pakyow separates views and view logic. This keeps the roles for design and developer clearly defined and minimizes conflicts.
+Pakyow provides several ways for the business logic of an application to easily interact with the views. In most frameworks the view logic is contained in the view itself, but Pakyow separates views and view logic. This keeps the roles for design and developer clearly defined and reduces annoyances.
 
-View construction happens before the business logic is invoked. The views can then be manipulated even easier than using a template language.
+View construction happens before the business logic is invoked. The business logic can then manipulate the constructed view. Anything that is possible in a template language is possible with Pakyow.
 
 <h2 id="section_8.1">8.1 View Manipulation</h2>
 
@@ -12,13 +12,13 @@ The fully constructed view can be accessed like this:
 presenter.view
 </div>
 
-Parts of the view can be accessed with the 'find' method. This method accepts a CSS selector and returns a collection of views that match the selector.
+Parts of the view can be accessed with the 'find' method. The 'find' method accepts a CSS selector and returns a collection of views that match the selector.
 
 <div class="code ruby">
 presenter.view.find('#container')
 </div>
 
-Several methods are available to modify a view, or collection of views. When a method is called on a view collection, it is simply passed through to the views in the collection. If the method returns a value when called on a single view, calling it on a collection of views will return an array of values.
+Several methods are available to modify a view (or collection of views). When a method is called on a view collection, it is simply passed through to the views in the collection. If the method returns a value when called on a single view, calling it on a collection of views will return an array of values.
 
 ### Content
 
@@ -41,7 +41,7 @@ Or:
 presenter.view.find('#container').content &lt;&lt; 'bar'
 </div>
 
-Views can also be turned into HTML:
+Views can be turned into a string of HTML:
 
 <div class="code ruby">
 presenter.view.find('#container').to_html
@@ -58,6 +58,8 @@ presenter.view.find('#container').attributes.class
 
 Any HTML attribute can be set or fetched in this way.
 
+TODO: appending attribute values
+
 ### Removing & Clearing Views
 
 A view can be removed:
@@ -66,7 +68,7 @@ A view can be removed:
 presenter.view.find('#container').remove
 </div>
 
-Or it's content cleared:
+Or have it's content cleared:
 
 <div class="code ruby">
 presenter.view.find('#container').clear
@@ -95,10 +97,14 @@ end
 </div>
 
 The makes it really easy to group manipulations together to more easily comprehend what's happening.
+TODO: explain the advantage of this (computation matches data structure)
 
 <h2 id="section_8.3">8.3 Binding</h2>
 
-Data can easily be bound to its view (for more information on how the view is informed of the data it represents, see [Views > Data Informed](#section_3.1)).
+TODO: this section should be rewritten based on binding changes; go more into the philosophy and give examples of binding objects and hashes
+
+Data can easily be bound to a view (for more information on how the view is informed of the data it represents, see [Views > Data Informed](#section_3.1)).
+TODO: needs more detail; set up a scenario?
 
 Given the following view:
 
@@ -150,6 +156,7 @@ presenter.use_view_path('path/to/views')
 </div>
 
 A root view can also be changed, again causing the root view to be rebuilt:
+TODO: we need another name for the compiled view; too many references to root view
 
 <div class="code ruby">
 presenter.set_view('path/to/root_view.html')

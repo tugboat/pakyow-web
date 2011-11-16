@@ -1,10 +1,11 @@
 <h1 id="section_9">9 Binders</h1>
 
 When binding data to a view it's often necessary to format the data before binding. Sometimes you also need to change other attributes in addition to setting content (e.g. setting the 'href' for an anchor tag). In Pakyow this logic lives in a Binder class.
+TODO: this needs to be rewritten; a binder is a collection of functions that act on data
 
 <div class="code ruby">
 class ContactBinder &lt; Pakyow::Presenter::Binder
-  binder_for :Contact
+  binder_for :contact
 
   def full_name
     "#{bindable.first_name} #{bindable.last_name}"
@@ -20,6 +21,7 @@ end
 </div>
 
 The 'binder_for' method informs Pakyow what object type this Binder should help bind. When the object is bound to a view Pakyow looks for a method that matches the attribute in the binder before looking in the object.
+TODO: rewrite based on binding changes
 
 The object being bound is accessible through the 'bindable' method. The method's return value determines the behavior of the binding process. If the return value is a hash it is mapped to content and/or attribtues for the view. Otherwise the value is converted into a string at used as the content for the view.
 
