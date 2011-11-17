@@ -1,7 +1,6 @@
 <h1 id="section_6">6 Handlers</h1>
 
-Handlers are named code blocks that can be invoked either explicitly or implicitly.
-
+Handlers are named code blocks that can be invoked explicitly and, in two cases, implicitly.
 They are defined within a 'handlers' block in application.rb.
 
 A handler is defined with a name and an optional response status.
@@ -31,8 +30,5 @@ invoke_handler!(500)
 In this case, a handler is executed if there is one with a corresponding response status.
 In any case, the response status is set to the status argument.
 
-TODO: I don't think the following got implemented this way. Is this what we want?
-
-A handler is implicitly invoked if defined with a response status and that status is what is set during the route block.
-
-
+See the section on [Error Handling](#section_11) to see how handlers
+for 404 and 500 response status values are implicitly invoked.
