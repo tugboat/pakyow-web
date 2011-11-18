@@ -85,7 +85,7 @@ h3 {
 }
 
 code, div.code.ruby {
-  font-family:Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  font-family:monospace;
   font-size:12px;
   display:block;
   background:#fff;
@@ -684,10 +684,6 @@ RESPONSIVE CSS
   
   #logo {
     display:none;
-  }
-  
-  code, div.ruby {
-    font-size:11px;
   }
   
   h1 {
