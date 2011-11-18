@@ -1,91 +1,70 @@
 <div class="homeIntro">
-  <img src="images/pakyow-small.png" class="logo">
-  <h1 class="logoText">pakyow</h1>
+  <div class="logoWrapper">
+    <img src="images/pakyow-small.png" class="logo">
+    <h1 class="logoText">pakyow</h1>
+  </div>
   <p class="clear"></p>
   <ul id="navigation"></ul>
   
   <h2>
-    Pakyow is a web framework for Ruby that packs a punch. Use it to knock out 
-    hard hitting projects with speed and finesse by deploying working code faster 
-    that's more maintainable later. 
-    <br>
-    <span class="rumble">Get ready to rumble.</span>
+    Pakyow is an open-source framework for building web apps in Ruby. It enables you to get
+    straight to work by letting data be data, views be views, and code be code.
+    <em>Simple.</em>
   </h2>
 </div>
 
-<!-- <div class="walkthrough">
-  <div class="box">
-    <h2>Let views be views.</h2>
-  
+<div class="walkthrough">
+  <div class="description">
+    <h3>Designer-friendly Views</h3>
+    
     <p>
-      Views are 100% HTML, no template language required. The view has finally
-      been freed from logic.
+      In Pakyow, views are purely structural and contain no logic, keeping the view focused on it's job of 
+      presentation. No special markup is required in the view. This means the designer
+      can build the presentation layer for an app in their own environment.
     </p>
+    
+    <a href="/manual">Learn more about views &rarr;</a>
   </div>
   
-  <div class="box">
-    <h2>Views are data aware.</h2>
+  <img src="/images/flow-designer_friendly_views.png">
+</div>
+
+<div class="walkthrough">
+  <img src="/images/flow-simple_prototypes.png">
   
+  <div class="description">
+    <h3>Simple Prototypes</h3>
+    
     <p>
-      A view knows what it presents. Use this to create powerful connections 
-      between business logic and views.
+      View construction happens automatically, which means a working, navigable front-end can be created without 
+      any back-end code. Business logic is added later without any changes to the front-end, eliminating resistance
+      and keeping development moving forward.
     </p>
-  </div>
-  
-  <div class="box">
-    <h2>Keep moving forward.</h2>
-  
-    <p>
-      Prototype an app by building the views first. Then write the view logic 
-      without changing a single view.
-    </p>
+    
+    <a href="/manual">Learn more about view construction &rarr;</a>
   </div>
 </div>
 
-<h1>Getting Started</h1>
-
-<p>
-  The Ruby language must be installed, as well as a package manager, such as <a href="http://rubygems.org">RubyGems</a>. 
-  Pakyow plays nice with <a href="http://ruby-lang.org">MRI</a> (1.8.7 and 1.9.2) and <a href="http://jruby.org/">JRuby</a>. 
-  Rubinius support is in the works.
-</p>
-
-<p>
-  Installation is super easy:
-  
-  <code class="console">gem install pakyow</code>
-</p>
-
-<p>
-  Here's the simplest app you can build:
-  
-  <div class="code ruby">
-require 'rubygems'
-require 'pakyow-core'
-
-class HelloApp &lt; Pakyow::Application
-  routes do
-    get '/' do
-      response.body &lt;&lt; "Hello Pakyow"
-    end
-  end
-end
-
-HelloApp.run
+<div class="walkthrough">
+  <div class="description">
+    <h3>Intelligent Connections</h3>
+    
+    <p>
+      Data awareness is built into views, meaning a view knows what it presents. Data is bound in from the back-end
+      without requiring a single change to the view. Roles and responsibilities remain clear throughout the
+      development process.
+    </p>
+    
+    <a href="/manual">Learn more about data binding &rarr;</a>
   </div>
-</p>
+  
+  <img src="/images/flow-intelligent_connections.png">
+</div>
 
 <p>
-  Pakyow includes an application generator that makes getting started even easier.
-  <code class="console">pakyow new application</code>
+  Pakyow does all of this (and more) while being simple to use and performant in tough
+  situations. It's the best way to take down a hard-hitting project. Does
+  your development process pack this much punch?
 </p>
 
-<p>
-  Then start the application server:
-  <code class="console">cd application<br>$ pakyow server</code>
-</p>
-
-<p>
-  That's it! You'll find your application running here: <a href="http://localhost:3000" target="_blank">localhost:3000</a>.
-  Check out the <a href="/manual">manual</a> for more information.
-</p> -->
+<div class="action"><a href="/manual">Get ready to rumble.</a></div>

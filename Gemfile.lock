@@ -1,12 +1,12 @@
 GIT
   remote: git://github.com/bryanp/pakyow_blog_engine.git
-  revision: 14760b7552f2b2bbfcc618bcfe0bfd3462d36e6f
+  revision: 7e765855cc783bea1213bf666aa005d84c2b873a
   specs:
     pakyow_blog_engine (0.1)
 
 GIT
   remote: git://github.com/metabahn/pakyow.git
-  revision: ef3df41661d64bfe051ce0b31efd9bae8cf5014b
+  revision: 53f247417761e55fccfb0afc4bc260c5cebcee87
   branch: release
   specs:
     pakyow (0.7)
@@ -31,7 +31,7 @@ GEM
     nokogiri (1.5.0-java)
     rack (1.3.5)
     rdiscount (1.6.8)
-    thin (1.2.11)
+    thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
