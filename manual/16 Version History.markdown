@@ -1,7 +1,22 @@
 <h1 id="section_16">16 Version History</h1>
 
 - 0.7 (November 19, 2011)
-  - TODO
+  - The core-presenter interface has been modified slightly.
+  - Added bang (!) to application methods that interrupt flow.
+  - Binding now supports hashes with the :to syntax.
+  - Binders are now binders for the data label instead of object type (e.g. binder_for :blog_post instead of binder_for :BlogPost).
+  - Current attribute value can be modified with procs.
+  - Routes and Handlers can now be invoked (with invoke_route! and invoke_handler!).
+  - Hooks (before/after/around) can be defined for routes.
+  - Fully constructed views are cached for each path (significant performance boost).
+  - The logger, reloader, and static file handler has been abstracted into Rack Middleware.
+  - Pakyow Mailer is now available to send views in an email message.
+  - pakyow console script now available.
+  - Root view override in index directories no longer specify a root view for siblings.
+  - Fix regex route error (was removing route vars).
+  - App file is no longer loaded twice upon initialization.
+  - Fix cookie creation when cookie is a non-nil value but not a String.
+  - Fix problem binding to a checkbox who’s value attribute is not set.
 
 - 0.6.3 (September 13, 2011): 
   - Routing performance has been improved.
