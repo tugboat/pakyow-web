@@ -47,7 +47,7 @@ request.cookies[:value] = {
 Issuing a browser redirect is easy:
 
 <div class="code ruby">
-app.redirect_to 'url'
+app.redirect_to! 'url'
 </div>
 
 The response status is set to 302 by default and the response is sent immediately after this call is made.
@@ -60,7 +60,7 @@ TODO: example
 A file can be sent:
 
 <div class="code ruby">
-app.send_file(file)
+app.send_file!(file)
 </div>
 
 A file or path can be passed. You can also pass the name the file will be sent as
@@ -70,7 +70,7 @@ TODO: example
 Data can also be sent:
 
 <div class="code ruby">
-app.send_data(data, mime_type)
+app.send_data!(data, mime_type)
 </div>
 
 The name the file will be sent as can also be passed.
@@ -102,4 +102,12 @@ Write to the log using the static Log class:
 
 <div class="code ruby">
 Log.puts "Just saying hello to the log"
+</div>
+
+<h2 id="section_10.7">10.7 Halting</h2>
+
+The execution of a route block or controller, a hook, or a handler can be stopped immediately and the current state of the response returned.
+
+<div class="code ruby">
+app.halt!
 </div>
