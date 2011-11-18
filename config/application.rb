@@ -22,8 +22,9 @@ module PakyowApplication
     end
     
     routes do
-      get '/',      :ApplicationController, :index
-      get '/manual', :ApplicationController, :manual
+      get '/',          :ApplicationController, :index
+      get '/manual',    :ApplicationController, :manual
+      get '/community', :ApplicationController, :community
       
       get '/posts' do
         BlogEngine.list

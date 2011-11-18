@@ -30,6 +30,10 @@ class ApplicationController
     highlight
   end
   
+  def community
+    presenter.view.find('#nav-community a').add_class('active')
+  end
+  
   protected
   
   def highlight
