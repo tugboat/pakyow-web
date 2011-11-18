@@ -213,6 +213,7 @@ ul {
 #footer a {
   color:#777;
   font-weight:bold;
+  border:0;
 }
 
 #footer a:hover {
