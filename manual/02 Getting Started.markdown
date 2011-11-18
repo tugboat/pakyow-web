@@ -41,8 +41,7 @@ contains the application class and defines the routes, configuration, and error
 handlers for the application.
 
 ### logs
-Contains the log file for the application (requests.log by default). 
-TODO: what is trying to be said in the parenthesis? rename default to log?
+Contains the log file for the application.
 
 ### public
 Any file placed in this directory can be accessed directly through the URL
