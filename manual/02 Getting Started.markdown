@@ -26,21 +26,24 @@ TODO: This should be more of a comparison.
 <h2 id="section_2.2">2.2 Application Structure</h2>
 
 ### app/lib
-The business logic lives here. No structure is forced, all files with a .rb extension are loaded at runtime. 
-TODO: make a note that this is configurable.
+This directory contains Ruby source files that define an application's business 
+logic. No structure is forced, all files with a .rb extension are loaded at 
+runtime by default. This behavior is configurable via the 'app.auto_reload' 
+configuration setting.
 
 ### app/views
-Where the views live. 
-TODO: expand on this and possibly link to view section
+All of the views for an application are contained in this directory. For more
+information about views and view structure, see [Views](#section_3).
 
 ### config
-All configuration files live here. Upon app generation it contains a single file, application.rb. This file contains the application class and defines the routes, configuration, and error handlers for the application.
-TODO: this isn't really a place for configurations, but for application files
+Upon app generation this directory contains a single file, application.rb, which
+contains the application class and defines the routes, configuration, and error 
+handlers for the application.
 
 ### logs
 Contains the log file for the application (requests.log by default). 
-TODO: rename default to log?
+TODO: what is trying to be said in the parenthesis? rename default to log?
 
 ### public
-The document root. Anything placed here can be accessed directly through the URL.
-TODO: give an example (images, css, js, etc)
+Any file placed in this directory can be accessed directly through the URL
+(images, stylesheets, javascripts, etc).

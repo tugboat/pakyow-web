@@ -1,4 +1,4 @@
-<h1 id="section_14">14 Version History</h1>
+<h1 id="section_16">16 Version History</h1>
 
 - 0.7 (November 19, 2011)
   - TODO
