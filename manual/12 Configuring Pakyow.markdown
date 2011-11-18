@@ -1,7 +1,5 @@
 <h1 id="section_12">12 Configuring Pakyow</h1>
 
-TODO: add middleware settings (others?)
-
 All configuration is defined in the Application class. If auto_reload is set to "true", the configuration will be reloaded on each request (perfect for development). Otherwise the configuration will be loaded once at runtime.
 
 Configuration can be defined for the entire app:
@@ -78,6 +76,10 @@ Sets the presenter to be used. This is set automatically when a presenter is inc
 The folder where static files live (CSS, Javascript, images, etc).
 
 Defaults to '{root}/public'.
+
+### app.static
+If true, static files will be served up by Pakyow (from {public_dir}). For best performance, 
+set to false and let a web server handle this.
 
 ### app.root
 The root directory of the application.
