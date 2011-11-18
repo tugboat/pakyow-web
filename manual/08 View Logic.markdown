@@ -149,14 +149,13 @@ MyView.new('path/to/another_view.html')
 
 <h2 id="section_8.6">8.6 Changing the View Path or Root View</h2>
 
-The view path can be changed at any point, causing the root view to be rebuilt:
+The view path can be changed at any point, causing the presentation layer to be rebuilt:
 
 <div class="code ruby">
 presenter.use_view_path('path/to/views')
 </div>
 
-A root view can also be changed, again causing the root view to be rebuilt:
-TODO: we need another name for the compiled view; too many references to root view
+A root view can also be changed, again causing the presentation layer to be rebuilt:
 
 <div class="code ruby">
 presenter.set_view('path/to/root_view.html')
