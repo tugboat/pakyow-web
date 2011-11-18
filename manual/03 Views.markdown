@@ -1,7 +1,8 @@
 <h1 id="section_3">3 Views</h1>
 
-In Pakyow, views define what the application will present. They are 100% HTML and no template language or special tags are needed to construct the view layer. 
-TODO: remove mention of "100% HTML" in favor of zero logic; rewrite the first sentence because it's vague
+Views in Pakyow contain no logic and simply define a structure around the data to be presented. No template language 
+or special markup is needed. Instead, the power of HTML is embraced and utilized in some creative ways to 
+provide an easier and more familiar way to build a view.
 
 <h2 id="section_3.1">3.1 View Construction</h2>
 
@@ -11,7 +12,7 @@ View construction begins with a root view, which usually defines the general vie
 
 Pakyow will look for content for this container in a content view named "main.html". Any number of containers can be defined in any view (root views or content views). 
 
-Views are defined in a folder hierarchy and are pieced together based on the URL (TODO: path, uri?). Say we have the following files in the views directory:
+Views are defined in a folder hierarchy and are pieced together based on the request path. Say we have the following files in the views directory:
 
     pakyow.html (the default root view; defines one content area named "main")
     index/
