@@ -21,7 +21,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    coderay (1.0.4)
+    coderay (0.9.8)
     daemons (1.1.4)
     eventmachine (0.12.10)
     gem_plugin (0.2.3)
@@ -41,7 +41,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coderay
+  coderay (~> 0.9)
   mongrel
   pakyow!
   pakyow_blog_engine!
