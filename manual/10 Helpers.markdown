@@ -1,7 +1,6 @@
 <h1 id="section_10">10 Helpers</h1>
 
-Helper methods are defined in one of two modules: Pakyow::Helpers or Pakyow::GeneralHelpers. GeneralHelpers only provide information and are used in the Binder classes.
-TODO: and the other Helpers do what?
+Helper methods are defined in one of two modules: Pakyow::Helpers or Pakyow::GeneralHelpers. GeneralHelpers only provide information and are used in the binders.
 
 <h2 id="section_10.1">10.1 Params</h2>
 
@@ -11,7 +10,7 @@ Query string parameters and values from parameterized routes are available in th
 request.params
 </div>
 
-<h2 id="section_10.2">10.2 Sessions & Cookies</h2>
+<h2 id="section_10.2">10.2 Sessions &amp; Cookies</h2>
 
 Sessions keep state across requests. They can be enabled by using any Rack session middleware:
 
@@ -50,10 +49,13 @@ Issuing a browser redirect is easy:
 app.redirect_to! 'url'
 </div>
 
-The response status is set to 302 by default and the response is sent immediately after this call is made.
+The response status is set to 302 and the response is sent immediately.
 
-You can also pass a status code to 'redirect_to' (e.g. 301 for permenent redirect).
-TODO: example
+You can also pass a status code to 'redirect_to':
+
+<div class="code ruby">
+app.redirect_to! 'url', 301  # permanent redirect
+</div>
 
 <h2 id="section_10.4">10.4 Sending Files</h2>
 
@@ -63,20 +65,26 @@ A file can be sent:
 app.send_file!(file)
 </div>
 
-A file or path can be passed. You can also pass the name the file will be sent as
+A file or path can be passed. You can also pass the file name
 and the mime type (which is guessed if not passed).
-TODO: example
+
+<div class="code ruby">
+app.send_file!(file, "xml_data.xml", "text/xml")
+</div>
 
 Data can also be sent:
 
 <div class="code ruby">
-app.send_data!(data, mime_type)
+app.send_data!(xml_data, "text/xml")
 </div>
 
-The name the file will be sent as can also be passed.
-TODO: example
+The file name can also be passed:
 
-<h2 id="section_10.5">10.5 Request & Response Objects</h2>
+<div class="code ruby">
+app.send_data!(xml_data, "text/xml", "xml_data.xml")
+</div>
+
+<h2 id="section_10.5">10.5 Request &amp; Response Objects</h2>
 
 The underlying Rack Request & Response objects can be accessed through the 'request' and 'response' methods. This is useful for directly modifying things like response status.
 
