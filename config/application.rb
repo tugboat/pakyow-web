@@ -21,6 +21,16 @@ module PakyowApplication
     configure(:development) do
     end
     
+    handlers do
+      handler :not_found, 404 do
+        presenter.use_view_path('errors/404')
+      end
+      
+      handler :fail, 500 do
+        presenter.use_view_path('errors/500')
+      end
+    end
+    
     routes do
       get '/',          :ApplicationController, :index
       get '/manual',    :ApplicationController, :manual
