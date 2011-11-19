@@ -56,11 +56,17 @@ presenter.view.find('#container').attributes.class = 'classname'
 presenter.view.find('#container').attributes.class
 </div>
 
-Any HTML attribute can be set or fetched in this way.
+Any HTML attribute can be set or fetched in this way. Current attribute values can be modified
+using procs. The current value is provided to the block and the return value is used as the
+new value.
 
-TODO: appending attribute values
+<div class="code ruby">
+presenter.view.find('#container).attributes.class = lambda { |cur_val| 
+  # do something to cur_val 
+}
+</div>
 
-### Removing & Clearing Views
+### Removing &amp; Clearing Views
 
 A view can be removed:
 

@@ -25,7 +25,15 @@ TODO: rewrite based on binding changes
 
 The object being bound is accessible through the 'bindable' method. The method's return value determines the behavior of the binding process. If the return value is a hash it is mapped to content and/or attribtues for the view. Otherwise the value is converted into a string at used as the content for the view.
 
-Methods defined in the Pakyow::GeneralHelpers module are available in the Binder class (request/response).
+Attributes and content can be modified using procs. The current value is provided to the block and the return value is used as the new value.
+
+<div class="code ruby">
+{
+  :content => lambda {|current_content| current_content.gsub('foo', 'bar')}
+}
+</div>
+
+Methods defined in the Pakyow::GeneralHelpers module are automatically available in the Binder class (request/response).
 
 <h2 id="section_9.1">9.1 Form Actions</h2>
 
@@ -74,6 +82,6 @@ def attribute_options
 end
 </div>
 
-<h2 id="section_9.3">9.3 Checkboxes & Radio Buttons</h2>
+<h2 id="section_9.3">9.3 Checkboxes &amp; Radio Buttons</h2>
 
 The checkbox or radio button who's value matches the value of the attribute is selected automatically.
