@@ -37,10 +37,12 @@ module PakyowApplication
       get '/community', :ApplicationController, :community
       
       get '/posts' do
-        BlogEngine.list
+        presenter.view.find('#nav-blog a').add_class('active')
+        # BlogEngine.list
       end
       
       get BlogEngine.post_uri do
+        presenter.view.find('#nav-blog a').add_class('active')
         BlogEngine.single
       end
       
