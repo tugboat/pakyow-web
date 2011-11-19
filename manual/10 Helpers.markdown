@@ -112,10 +112,28 @@ Write to the log using the static Log class:
 Log.puts "Just saying hello to the log"
 </div>
 
-<h2 id="section_10.7">10.7 Halting</h2>
+<h2 id="section_10.7">10.7 Interrupting Execution</h2>
 
+### halt!
 The execution of a route block or controller, a hook, or a handler can be stopped immediately and the current state of the response returned.
 
 <div class="code ruby">
 app.halt!
 </div>
+
+### invoke_handler!
+The execution of a route block or controller, a hook, or a handler can be stopped immediately and control
+transferred to a handler. See [Handlers](#section_6) for more information.
+
+### invoke_route!
+The execution of a route block or controller, a hook, or a handler can be stopped immediately and control
+transferred to another block or controller.
+
+<div class="code ruby">
+app.invoke_route! '/some/route'
+app.invoke_route! '/another/route', :get
+</div>
+
+The content returned will be the same as if this route was originally called from the client.
+The optional second argument specifies the request method used to find the specified route.
+If omitted, the request method that is currently be executed is used.

@@ -16,7 +16,7 @@ end
 A handler is invoked explicitly by calling 'invoke_handler!(name)' from a route block or controller, hook, or another handler.
 
 <div class="code ruby">
-invoke_handler!(:not_found)
+app.invoke_handler! :not_found
 </div>
 
 When invoked, current execution is stopped and control is transferred to the handler.
@@ -24,7 +24,7 @@ If the handler is defined with a response status, the response is set accordingl
 
 A handler may also be invoked with a status code argument.
 <div class="code ruby">
-invoke_handler!(500)
+app.invoke_handler! 500
 </div>
 
 In this case, a handler is executed if there is one with a corresponding response status.
