@@ -37,8 +37,8 @@ class ApplicationController
   protected
   
   def highlight
-    presenter.view.find('div.ruby').each do |view|
-      view.content = CodeRay.scan(view.content.strip.gsub(/&lt;|&gt;/) {|s| {'&lt;' => '<','&gt;' => '>'}[s]}, :ruby).div(:css => :class)
+    presenter.view.find('div.code').each do |view|
+      view.content = Pygments.highlight(view.content.strip.gsub(/&lt;|&gt;/) {|s| {'&lt;' => '<','&gt;' => '>'}[s]}, :lexer => view.attributes.class.gsub('code', '').strip)
     end
   end
 end

@@ -84,7 +84,7 @@ h3 {
   margin-bottom:5px;
 }
 
-code, div.code.ruby {
+code, div.code {
   font-family:monospace;
   font-size:12px;
   display:block;
@@ -96,7 +96,7 @@ code, div.code.ruby {
   border:1px solid #cbcbcb;
 }
 
-div.code.ruby {
+div.code {
   margin-top:-10px;
 }
 

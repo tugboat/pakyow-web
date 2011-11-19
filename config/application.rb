@@ -2,7 +2,8 @@ require 'rubygems'
 require 'bundler/setup'
 
 require 'rubygems'
-require 'coderay'
+# require 'coderay'
+require 'pygments'
 require 'rdiscount'
 
 require 'pakyow'
@@ -19,6 +20,7 @@ module PakyowApplication
     config.app.default_environment = :development
     
     configure(:development) do
+      require 'pp'
     end
     
     handlers do
