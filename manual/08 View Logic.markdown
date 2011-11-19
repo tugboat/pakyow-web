@@ -103,7 +103,6 @@ end
 </div>
 
 The makes it really easy to group manipulations together to more easily comprehend what's happening.
-TODO: explain the advantage of this (computation matches data structure)
 
 <h2 id="section_8.3">8.3 Binding</h2>
 
