@@ -91,6 +91,7 @@ Where the backend code lives.
 
 Defaults to '{root}/app/lib'.
 
+
 ### presenter.default_root_view_name
 The default root view to use.
 
@@ -116,6 +117,7 @@ Where the views live.
 
 Defaults to '{root}/app/views'.
 
+
 ### server.host
 What host to run the application on (only used when running the application with the built-in server).
 
@@ -125,3 +127,25 @@ Defaults to '0.0.0.0'.
 What port to run the application on (only used when running the application with the built-in server).
 
 Defaults to '3000'.
+
+
+### mailer.default_sender
+The default value for the message sender. Can be overridden on a message by message basis through the
+message object.
+
+Defaults to 'Pakyow'.
+
+### mailer.default_content_type
+The default content type for the message.
+
+Defaults to 'text/html; charset=UTF-8'.
+
+### mailer.delivery_method
+How the message will be delivered.
+
+Defaults to ':sendmail'.
+
+### mailer.delivery_options
+Other options that go along with the delivery method.
+
+Defaults to '{:enable_starttls_auto => false}'.
