@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "pakyow", :git => "git://github.com/metabahn/pakyow.git", :branch => :release
+gem "pakyow"
 gem "thin", "~>1.2", :platforms => :mri
 gem "mongrel", :platforms => :jruby
 gem "rdiscount"

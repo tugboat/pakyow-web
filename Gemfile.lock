@@ -4,25 +4,6 @@ GIT
   specs:
     pakyow_blog_engine (0.1)
 
-GIT
-  remote: git://github.com/metabahn/pakyow.git
-  revision: 1c576dd8268570b438624b51c73588482488f56e
-  branch: release
-  specs:
-    pakyow (0.7)
-      pakyow-core (= 0.7)
-      pakyow-mailer (= 0.7)
-      pakyow-presenter (= 0.7)
-    pakyow-core (0.7)
-      rack (~> 1.3)
-    pakyow-mailer (0.7)
-      mail (~> 2.3)
-      pakyow-core (= 0.7)
-      pakyow-presenter (= 0.7)
-    pakyow-presenter (0.7)
-      nokogiri (~> 1.5)
-      pakyow-core (= 0.7)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -40,7 +21,19 @@ GEM
     mongrel (1.1.5-java)
       gem_plugin (>= 0.2.3)
     nokogiri (1.5.0)
-    nokogiri (1.5.0-java)
+    pakyow (0.7.0)
+      pakyow-core (= 0.7.0)
+      pakyow-mailer (= 0.7.0)
+      pakyow-presenter (= 0.7.0)
+    pakyow-core (0.7.0)
+      rack (~> 1.3)
+    pakyow-mailer (0.7.0)
+      mail (~> 2.3)
+      pakyow-core (= 0.7.0)
+      pakyow-presenter (= 0.7.0)
+    pakyow-presenter (0.7.0)
+      nokogiri (~> 1.5)
+      pakyow-core (= 0.7.0)
     polyglot (0.3.3)
     pygments.rb (0.2.3)
       rubypython (>= 0.5.1)
@@ -63,7 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   mongrel
-  pakyow!
+  pakyow
   pakyow_blog_engine!
   pygments.rb
   rdiscount
