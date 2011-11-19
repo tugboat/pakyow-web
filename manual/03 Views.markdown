@@ -51,22 +51,21 @@ In this case requests for '/another_page' will use the 'another_root.html' root 
 
 <h2 id="section_3.2">3.2 Data Informed</h2>
 
-Views are informed of the data they present. This is accomplished with the itemprop attribute. Let's say we have some HTML that represents a contact:
+Views are informed of the data they present. This is accomplished with the itemprop attribute. In the following example
+the view represents the full_name and email of the contact data type:
 
     <div class="contact">
       <span itemprop="contact[full_name]">John Doe</span>
       <a itemprop="contact[email]">johndoe@gmail.com</a>
     </div>
 
-In this example the view represents two pieces of data from the Contact model: full_name and email.
-
 Form fields can be informed using the "name" attribute. The following are identical:
 
     <input type="text" name="contact[full_name]">
     <input type="text" itemprop="contact[full_name]">
 
-See [View Logic > Binding](#section_6.3) for more information on how objects are bound to views.
+This is how connections are made between front-end and back-end. See [View Logic > Binding](#section_6.3) for more information on how objects are bound to views.
 
-<h2 id="section_3.3">3.3 AJAX & Partial Content</h2>
+<h2 id="section_3.3">3.3 AJAX &amp; Partial Content</h2>
 
 It's often necessary to request content only for part of a view (say for replacing content via AJAX). This is easy in Pakyow. Just set the '_container' parameter in your AJAX request to the container you want content for. The response body will consist of only the content for the container requested.
