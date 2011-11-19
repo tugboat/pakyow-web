@@ -21,8 +21,6 @@ what you might be used to. When a request is received the views are assembled
 first (based on the URL). If a route matches the appropriate business logic
 is invoked. The business logic can then manipulate the view and bind data to it.
 
-TODO: This should be more of a comparison.
-
 <h2 id="section_2.2">2.2 Application Structure</h2>
 
 ### app/lib

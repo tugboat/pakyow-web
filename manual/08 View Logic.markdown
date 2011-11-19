@@ -56,11 +56,17 @@ presenter.view.find('#container').attributes.class = 'classname'
 presenter.view.find('#container').attributes.class
 </div>
 
-Any HTML attribute can be set or fetched in this way.
+Any HTML attribute can be set or fetched in this way. Current attribute values can be modified
+using procs. The current value is provided to the block and the return value is used as the
+new value.
 
-TODO: appending attribute values
+<div class="code ruby">
+presenter.view.find('#container).attributes.class = lambda { |cur_val| 
+  # do something to cur_val 
+}
+</div>
 
-### Removing & Clearing Views
+### Removing &amp; Clearing Views
 
 A view can be removed:
 
@@ -97,29 +103,29 @@ end
 </div>
 
 The makes it really easy to group manipulations together to more easily comprehend what's happening.
-TODO: explain the advantage of this (computation matches data structure)
 
 <h2 id="section_8.3">8.3 Binding</h2>
 
-TODO: this section should be rewritten based on binding changes; go more into the philosophy and give examples of binding objects and hashes
-
-Data can easily be bound to a view (for more information on how the view is informed of the data it represents, see [Views > Data Informed](#section_3.1)).
-TODO: needs more detail; set up a scenario?
-
-Given the following view:
+Data can easily be bound to a view (for more information on how the view is informed of the data it represents, see [Views > Data Informed](#section_3.2)). Given the following view:
 
     <div class="contact">
       <span itemprop="contact[full_name]">John Doe</span>
       <a itemprop="contact[email]">johndoe@gmail.com</a>
     </div>
 
-We find the view and bind a contact object to it:
+We can bind a Contact object to it:
 
 <div class="code ruby">
-presenter.view.find('.contact').bind(contact)
+view.bind(Contact.new(:full_name => "Matz", :email => "matz@ruby-lang.org"))
 </div>
 
-Pakyow assumes that the contact object is either a hash with keys that match the values defined in itemprop attributes, or an object with methods that match.
+In this case, the data type is inferred from the object type (Contact becomes contact and FooBar becomes foo_bar). Objects and 
+hashes can also be bound to any label:
+
+<div class="code ruby">
+data = {:full_name => "Matz", :email => "matz@ruby-lang.org"}
+view.bind(data, :to => :contact)
+</div>
 
 <h2 id="section_8.4">8.4 Repeating Views</h2>
 
