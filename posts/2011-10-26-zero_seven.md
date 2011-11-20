@@ -40,6 +40,7 @@ For pakyow-presenter, we made a simple change to how view caching works. In 0.6.
 
 Some subtle, but important changes have been made to how binding works. In previous versions, the importance was placed on the data type being bound to the view. That's no longer the case. Instead, emphasis is placed on the data label declared in the view. This means that any object (or hash) can be bound to any label. Here's an example, starting with the view:
 
+    html:
     <div>
       <span itemprop="person[name]">John Doe</span>
       <span itemprop="person[email]">johnd@pakyow.com</span>
@@ -47,18 +48,22 @@ Some subtle, but important changes have been made to how binding works. In previ
 
 Binding a Person object:
 
+    ruby:
     view.bind(Person.new({:name => "Matz", :email => "matz@ruby-lang.org"}))
 
 In this case, the data label is inferred from the object type and is matched to 'person'. We can also bind a hash, using the new :to syntax:
 
+    ruby:
     view.bind({:name => "Matz", :email => "matz@ruby-lang.org"}, :to => :person)
 
 The :to syntax will work with any object:
 
+    ruby:
     view.bind(SpecificPerson.new({ :name => "Matz", :email => "matz@ruby-lang.org"}), :to => :person)
 
 Each of these will result in the following HTML:
 
+    html:
     <div>
       <span itemprop="person[name]">Matz</span>
       <span itemprop="person[email]">matz@ruby-lang.org</span>
@@ -68,15 +73,17 @@ Each of these will result in the following HTML:
 
 This also lead to a subtle change in how Binders are declared. In 0.6.*, a binder was declared for an object type:
 
+    ruby:
     class PersonBinder < Pakyow::Presenter::Binder
       binder_for :Person
     end
 
 In 0.7, the binder is declared for a data label:
 
-class PersonBinder < Pakyow::Presenter::Binder
-  binder_for :person
-end
+    ruby:
+    class PersonBinder < Pakyow::Presenter::Binder
+      binder_for :person
+    end
 
 This allows a binder to be used when binding any object or hash to a particular label in the view.
 
@@ -86,6 +93,7 @@ This allows a binder to be used when binding any object or hash to a particular 
 
 In previous versions, you could only replace attribute values. We've added a way to make changes to the current values using procs. Here's an example:
 
+    ruby:
     view.find('#container').attributes.class = lambda { |cur_val| 
       # do something to cur_val 
     }
@@ -114,6 +122,7 @@ A new gem, pakyow-mailer, has been added that allows for mail to be sent easily 
 
 This is an addition to the Pakyow CLI and allows you to easily start an IRB session and interact with your application. With the addition of invoke_route! it is now possible to debug back-end code in the command line. Learn more with the following command:
 
+    console:
     pakyow console --help
 
 ## Bug Fixes

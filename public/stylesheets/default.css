@@ -104,6 +104,10 @@ code.console:before {
   content: '$ ';
 }
 
+code.console .highlight, code.console pre {
+  display:inline;
+}
+
 .top_p {
   font-size:14px;
   line-height:1.5em;

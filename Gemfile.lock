@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bryanp/pakyow_blog_engine.git
-  revision: dac7f2ba6d9a4ff56c9ae815123022f0924f637f
+  revision: 37aa8fd783b291d629cbf4e71c873518bd767466
   specs:
     pakyow_blog_engine (0.1)
 
