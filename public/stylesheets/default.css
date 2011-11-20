@@ -71,7 +71,7 @@ h2 a {
 h2 {
   font-family: "museo-sans-1","museo-sans-2", sans-serif;
   font-size:16px;
-  font-weight:300;
+  font-weight:bold;
   color:#666;  
   margin-bottom:10px;
   margin-top:40px;
@@ -416,61 +416,56 @@ table th {
 /* BLOG */
 
 #posts, #post {
-  margin-top:40px;
-  width:470px;
+  margin-left:0;
+  margin-top:40px !important;
 }
 
-#posts li {
+#posts > li {
 /*  background:url('/images/post_divider.png') no-repeat bottom;*/
   padding-bottom:20px;
   padding-top:40px;
   border-bottom:1px solid #eee;
 }
 
-#posts li:first-child, #posts li.first {
+#posts > li:first-child, #posts > li.first {
   padding-top:0;
 }
 
-#posts li:last-child, #posts li.last {
-/*  background:none;*/
+#posts > li:last-child, #posts > li.last {
   border:0;
 }
 
-#posts li h2, #post h2 {
-  color:#333;
-  font-size:16px;  
-  font-family: "museo-sans-1","museo-sans-2", sans-serif;
-  font-weight:500;
+#posts > li h1, #post h1 {
 }
 
-#posts h2 a, #post h2 a {
-  color:#333;
-  font-size:16px;
-  text-decoration:none;
-  font-weight:500;
+#posts h1 a, #post h1 a {
+  border:0;
 }
 
-#posts h2.outgoing, #post h2.outgoing {
+#posts h1.outgoing, #post h1.outgoing {
   margin-bottom:20px;
 }
 
-#posts h2.outgoing a, #post h2.outgoing a {
+#posts h1.outgoing a, #post h1.outgoing a {
   color:#a4292b;
   font-size:11px;
   text-decoration:underline;  
 }
 
-#posts li .meta, #post .meta {
+#posts > li .meta, #post .meta {
   font-size:10px;  
   margin-bottom:20px;
   color:#666;
 }
 
-#posts li .postdate, #post .postdate {
+#posts > li .postdate, #post .postdate {
   text-transform:uppercase;
+  font-size:11px;
+  font-weight:normal;
+  margin-left:20px;
 }
 
-#posts li img, #post img {
+#posts > li img, #post img {
   border:3px solid #eee;
   padding:8px;
 }
@@ -480,13 +475,22 @@ table th {
   margin-bottom:32px;
 }
 
-#posts li .permalink {
-  float:right;
-}
-
-#posts li .permalink img {
+#posts > li .permalink {
   float:right;
   border:0;
+}
+
+#posts > li .permalink img {
+  float:right;
+  border:0;
+}
+
+#posts p {
+  margin-bottom:15px;
+}
+
+#posts ul {
+  padding-left:30px !important;
 }
 
 .readmore {

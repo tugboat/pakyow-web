@@ -40,12 +40,12 @@ module PakyowApplication
       
       get '/posts' do
         presenter.view.find('#nav-blog a').add_class('active')
-        # BlogEngine.list
+        BlogEngine.list
       end
       
       get BlogEngine.post_uri do
-        presenter.view.find('#nav-blog a').add_class('active')
         BlogEngine.single
+        presenter.view.find('#nav-blog a').add_class('active')
       end
       
       get '/feed' do
