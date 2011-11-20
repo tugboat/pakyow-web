@@ -61,7 +61,7 @@ using procs. The current value is provided to the block and the return value is 
 new value.
 
 <div class="code ruby">
-presenter.view.find('#container).attributes.class = lambda { |cur_val| 
+presenter.view.find('#container').attributes.class = lambda { |cur_val| 
   # do something to cur_val 
 }
 </div>
