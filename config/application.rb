@@ -15,6 +15,13 @@ if File.exists? '../shared/conf-production.rb'
   require '../shared/conf-production'
 end
 
+ENV['TZ'] = 'America/Chicago'
+
+BLOG_TITLE      = "Pakyow Development Blog" unless defined?(BLOG_TITLE)
+BLOG_DESC       = "The development blog for Pakyow, an open-source framework for building web apps in Ruby." unless defined?(BLOG_DESC)
+BLOG_URL        = "http://pakyow.com" unless defined?(BLOG_URL)
+BLOG_COPYRIGHT  = "2011 Bryan Powell" unless defined?(BLOG_COPYRIGHT)
+
 module PakyowApplication
   class Application < Pakyow::Application
     config.app.default_environment = :development
