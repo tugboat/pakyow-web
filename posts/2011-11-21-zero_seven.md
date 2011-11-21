@@ -1,11 +1,11 @@
 ---
 title: 0.7 Release
-time: 9:00am CST
+time: 6:45am CST
 ---
 
 We're proud to announce Pakyow 0.7.0, available now. It's been a little over two months since the release of 0.6.3 and a lot of work has gone into this release. A lot of consistency has been added to the framework which will allow us to focus the explanation and the message of letting code be code, views be views, and data be data. This release also adds to the sturdiness of the platform, one we will continue to build on in future releases.
 
-The details of each addition and change can be found below. We have also done our best to explain the philosophy and thought behind each feature. In an effort to make the conversations more public, we have decided to make better use of our mailing list. We would love your input as we start discussing core features for the next major release. If you would like to be a part of this please [join the mailing list](http://groups.google.com/group/pakyow).
+The details of each addition and change can be found below. We have also done our best to explain the philosophy and thought behind each feature. In an effort to make the conversations more public, we have decided to make better use of our mailing list. We would love your input as we start discussing core features for the next major release. If you would like to be a part of this discussion please [join the mailing list](http://groups.google.com/group/pakyow).
 
 And now, the details.
 
@@ -71,7 +71,7 @@ Each of these will result in the following HTML:
 
 [Read more about Data Binding &rarr;](/manual#section_8.3)
 
-This also lead to a subtle change in how Binders are declared. In 0.6.*, a binder was declared for an object type:
+This also led to a subtle change in how Binders are declared. In 0.6.*, a binder was declared for an object type:
 
     ruby:
     class PersonBinder < Pakyow::Presenter::Binder
@@ -137,4 +137,4 @@ Several bug fixes are included in this release:
 
 ## Discussion
 
-If you have any comments on this post please join the conversation on our [mailing list](). TODO: add link to thread once created.
+If you have any comments on this post please join the conversation on our [mailing list](https://groups.google.com/forum/#!topic/pakyow/B2JS8vOzR9Q). Bug reports should be submitted to our [GitHub Repo](https://github.com/metabahn/pakyow/issues).
