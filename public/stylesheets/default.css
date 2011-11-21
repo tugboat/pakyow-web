@@ -277,7 +277,7 @@ ul {
   color:#333;
   float:left;
   margin-top:10px;
-  font-family: myriad-pro-1,myriad-pro-2;
+  font-family: myriad-pro-1,myriad-pro-2, "Helvetica Neue";
   font-weight:700;
   font-size:100px
 }
@@ -647,91 +647,3 @@ ul p {
   color:#333;
   border-color:#333;
 }
-
-/*----------------------------------------------------
-RESPONSIVE CSS
-----------------------------------------------------*/
-
-/* iPhone */
-@media only screen and (max-device-width: 480px) {
-  #wrapper {
-    width:480px;
-    overflow:hidden;
-    padding:20px 10px;
-    margin-top:0;
-  }
-  
-  .homeIntro h1 {
-    margin-top:40px;
-    margin-bottom:20px;
-  }
-  
-  .homeIntro h2 {
-    margin:0;
-/*    margin-bottom:40px;*/
-  }
-  
-  #navigation {
-    margin-left:0;
-    margin-bottom:0;
-  }
-  
-  #navigation li {
-    display:block;   
-    margin-bottom:5px; 
-  }
-  
-  #navigation li a {
-    border-bottom:2px solid #c6d5ea;
-  }
-  
-  #navigation.right {
-    width:480px;
-    float:none;
-    margin-bottom:0;
-  }
-  
-  #logo {
-    display:none;
-  }
-  
-  h1 {
-    font-size:36px;
-    line-height:1.3em;
-  }
-  
-  .rumble {
-    display:block;
-    margin-top:10px;
-  }
-  
-  .box {
-    float:none;
-    width:480px;
-    margin:0;
-  }
-}
-
-/* iPad */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-  #wrapper {
-    width:780px;
-    overflow:hidden;
-    padding:20px 10px;
-    margin-top:0;
-  }
-  
-  .box {
-    width:230px;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  #wrapper {
-    width:780px;
-    overflow:hidden;
-    padding:20px 10px;
-    margin-top:0;
-  }
-}
-
