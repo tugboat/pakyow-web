@@ -1,6 +1,6 @@
 ---
 title: 0.7 Release
-time: 8:18pm CST
+time: 9:00am CST
 ---
 
 We're proud to announce Pakyow 0.7.0, available now. It's been a little over two months since the release of 0.6.3 and a lot of work has gone into this release. A lot of consistency has been added to the framework which will allow us to focus the explanation and the message of letting code be code, views be views, and data be data. This release also adds to the sturdiness of the platform, one we will continue to build on in future releases.
@@ -30,7 +30,7 @@ Two methods (invoke_route! and invoke_handler!) are new in 0.7.
 
 ## Performance Improvements
 
-Significant performance improvements have been made to pakyow-core and pakyow-presenter. Based on our benchmarking, an application that uses pakyow-core only went from handling 1,500} requests per second to {2,400} requests per second (a 60% increase). An application that uses pakyow-presenter to present a simple view went from handling {600} to {1,500} requests per second (a 150% increase). Here's how we did it.
+Significant performance improvements have been made to pakyow-core and pakyow-presenter. Based on our benchmarking, an application that uses pakyow-core only went from handling 1,500 requests per second to 2,400 requests per second (a 60% increase). An application that uses pakyow-presenter to present a simple view went from handling 600 to 1,500 requests per second (a 150% increase). Here's how we did it.
 
 Performance in pakyow-core was improved by introducing three pieces of middleware: Static, Logger, and Reloader. In production settings, when static files are handled by a web server, loggers aren't needed, and the application doesn't need to be reloaded, this middleware can simply be turned off, resulting in the increase you see above.
 
@@ -102,7 +102,7 @@ In previous versions, you could only replace attribute values. We've added a way
 
 ## Invoke Route / Handler
 
-Any route or handler can be invoked using the new invoke_route! and invoke_handler! methods. This means that business logic for a different route can be used without issuing a redirect or making another request. It also opens the door for testing business logic using the console.
+Any route or handler can be invoked using the new invoke_route! and invoke_handler! methods. This means that business logic for a different route can be used without issuing a redirect or making another request.
 
 [Read more about Route / Handler Invocation &rarr;](/manual#section_10.7)
 
@@ -120,7 +120,7 @@ A new gem, pakyow-mailer, has been added that allows for mail to be sent easily 
 
 ## Console
 
-This is an addition to the Pakyow CLI and allows you to easily start an IRB session and interact with your application. With the addition of invoke_route! it is now possible to debug back-end code in the command line. Learn more with the following command:
+This is an addition to the Pakyow CLI and allows you to easily start an IRB session and interact with your application. Learn more with the following command:
 
     console:
     pakyow console --help
