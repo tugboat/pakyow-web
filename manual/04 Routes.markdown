@@ -75,4 +75,4 @@ A model can also be provided in the restful route definition:
 restful 'posts', :PostsController, :Post
 </div>
 
-Providing the model brings a few advantages when binding. This is discussed in more depth here: [Binders - Form Action](#section_7.1).
+Providing the model brings a few advantages when binding. This is discussed in more depth here: [Binders - Form Action](#section_9.1).
