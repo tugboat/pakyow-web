@@ -11,4 +11,4 @@ class MyController
 end
 </div>
 
-There are several convenience methods (such as 'app', 'request', 'response', and 'presenter') that you will probably want easy access to from your controller. Just include 'Pakyow::Helpers' into your class (see [Helpers](#section_8) for more information).
+There are several convenience methods (such as 'app', 'request', 'response', and 'presenter') that you will probably want easy access to from your controller. Just include 'Pakyow::Helpers' into your class (see [Helpers](#section_10) for more information).
